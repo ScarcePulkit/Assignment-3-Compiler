@@ -1,10 +1,10 @@
-## Assignment-3-Compiler
-# Introduction  
+# Assignment-3-Compiler
+## Introduction  
 This Lex code is used to generate a DFA (Deterministic Finite Automaton) that processes a specific input file and extracts  
 (i) The number of transactions on the given date  
 (ii) The custId of the customer with maximum transaction value on the given date.
 <br>
-# Compilation and Execution
+## Compilation and Execution
 To compile and run the Lex code, follow these steps:  
 <br>
 Make sure you have Lex (flex) installed on your system.  
@@ -17,7 +17,7 @@ Run the compiled executable:<br>
 ./a.out <br>
 After execution, the program will generate an output file named "output.txt" containing the calculated statistics.<br>
 <br>
-# DFA Rules and Processing Logic<br>
+## DFA Rules and Processing Logic<br>
 The Lex code defines a DFA that processes the "data.txt" file and extracts specific patterns representing data entries. The processed data is then used to calculate some statistics. The main components of the DFA and their functionality are explained below:<br>
 <br>
 **1. yywrap() Function:**<br>
@@ -43,7 +43,7 @@ It calculates the statistics for each unique day and month combination and store
 **4. Output:**<br>
 After processing the entire input file, the DFA calculates the maximum value (V) and the corresponding identifier for each unique day and month combination. The statistics are stored in the dat array. The DFA then reads an input file named "input.txt" (assuming it exists) and looks for specific entries in the dat array based on the data from "data.txt". Finally, it writes the calculated statistics for the particular data entry to the "output.txt" file.<br>
 <br>
-# Important Variables and Structures<br>
+## Important Variables and Structures<br>
 curid: Stores the current identifier found in the input file.<br>
 d: Stores the processed day (DD) from the date.<br>
 m: Stores the processed month (MM) from the date.<br>
@@ -52,10 +52,10 @@ val: Stores the parsed value (V) from the data entry.<br>
 err: An error flag used to indicate invalid input.<br>
 struct Date: A structure that holds data related to a particular day and month combination, such as the maximum value (V) and its corresponding identifier.<br>
 <br>
-# Input and Output Files<br>
+## Input and Output Files<br>
 Input File: The Lex code expects an input file named "data.txt" containing data entries in a specific format, as described in the DFA Logic section above. Each data entry starts with an identifier starting with '$', followed by a date in the format "DD/MM", and a value (integer) separated by semicolons.<br>
 <br>
 Output File: After processing the input file, the Lex code generates an output file named "output.txt". This file contains specific entries from the processed data along with their calculated statistics. The format of each line in "output.txt" is: "$<k>$<identifier>#", where <k> is the number of occurrences for that specific day and month combination, and <identifier> is the identifier associated with the maximum value (V) for that combination.<br>
 <br>
-# Conclusion<br>
+## Conclusion<br>
 The provided Lex code generates a DFA that processes a given input file containing data entries. It extracts specific patterns representing days, months, and values from the entries and calculates statistics based on this data. The statistics are then written to an output file. Users can customize and enhance the code as needed to fit their specific use cases and requirements.<br>
